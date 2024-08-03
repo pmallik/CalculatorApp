@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "History Data";
+}
+
+<h3>History Data</h3>
+@if (Model.DataStore != null && Model.DataStore.Count > 0)
+{
+    <ul>
+        @foreach (var item in Model.DataStore)
+        {
+            <li><strong>@item.Key</strong>: @item.Value</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No data available.</p>
+}
