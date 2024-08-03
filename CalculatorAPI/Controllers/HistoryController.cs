@@ -17,13 +17,11 @@ namespace CalculatorAPI.Controllers
             // This part of application is checking if user is authenticated or not 
             // to display history of data
 
-            //if (!User.Identity.IsAuthenticated)
-            //{
-              //  return Unauthorized();
-          //  }
-            //...
-           // return Ok("passed authorization");
-
+            if (!User.Identity.IsAuthenticated)
+            {
+                return Unauthorized();
+            }
+            
             return Ok(HistoryData);
         }
 
