@@ -16,6 +16,7 @@ namespace CalculatorAPI.Controllers
         {
             // This part of application is checking if user is authenticated or not 
             // to display history of data
+            // If this code is commented below anyone can view History Data
 
             if (!User.Identity.IsAuthenticated)
             {
